@@ -2864,7 +2864,7 @@ const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/nod
 	pageMap,
 	renderers,
 });
-const _args = {"mode":"standalone","client":"file:///D:/coder/ASTRO_PORTFOLIO/my-portfolio/dist/client/","server":"file:///D:/coder/ASTRO_PORTFOLIO/my-portfolio/dist/server/","host":false,"port":3000};
+const _args = {"mode":"standalone","client":"file:///D:/coder/ASTRO_PORTFOLIO/my-portfolio/dist/client/","server":"file:///D:/coder/ASTRO_PORTFOLIO/my-portfolio/dist/server/","host":false,"port":3099};
 
 const _exports = createExports(_manifest, _args);
 const handler = _exports['handler'];
