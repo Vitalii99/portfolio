@@ -11,6 +11,6 @@ import 'mime';
 import 'string-width';
 import 'mime/lite.js';
 
-const page = () => import('./prerender.55e9013a.mjs').then(n => n.i);
+const page = () => import('./pages/index.astro.de68ba99.mjs').then(n => n.i);
 
 export { page };
