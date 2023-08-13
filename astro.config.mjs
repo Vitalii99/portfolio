@@ -1,6 +1,7 @@
 import { defineConfig, sharpImageService } from 'astro/config';
-import node from '@astrojs/node';
 import tailwind from "@astrojs/tailwind";
+
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,14 +9,12 @@ export default defineConfig({
     port: 3099
   },
   output: 'server',
-  adapter: node({
-    mode: 'standalone',
-  }),
+  adapter: netlify(),
   integrations: [tailwind()],
   experimental: {
     assets: true
   },
   image: {
     service: sharpImageService()
-  },
+  }
 });

@@ -2,13 +2,10 @@
 import 'html-escaper';
 import { a as $$Layout } from './404.astro.59c690cf.mjs';
 import { $ as $$Header, a as $$Footer } from './index.astro.de68ba99.mjs';
-import 'path-to-regexp';
 import 'cookie';
-import '@astrojs/internal-helpers/path';
 import 'kleur/colors';
-import 'node:fs';
-import 'node:http';
-import 'node:tls';
+import '@astrojs/internal-helpers/path';
+import 'path-to-regexp';
 import 'mime';
 import 'string-width';
 import 'mime/lite.js';
