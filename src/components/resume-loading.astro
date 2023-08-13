@@ -1,0 +1,43 @@
+---
+---
+
+<div
+  id="resume-loading-mobile"
+  class="w-48 h-14 hidden justify-center items-center bg-gradient-45 from-pantone from-10% via-blue-light via-50% to-blue-dark to-90% rounded-full border-none"
+>
+  <ul class="h-9 flex flex-row gap-x-2 justify-center items-center">
+    <li class="w-2 h-2 el-flashing-left bg-pantone rounded-full opacity-50"></li>
+    <li class="w-2 h-2 el-flashing-middle bg-pantone rounded-full"></li>
+    <li class="w-2 h-2 el-flashing-right bg-pantone rounded-full opacity-75"></li>
+  </ul>
+</div>
+
+<style>
+  /*LOADING WITH FLASHING ELLIPSES*/
+  .el-flashing-middle {
+    animation: el-flashing 1s infinite linear alternate;
+    animation-delay: 1s;
+  }
+  .el-flashing-left {
+    animation: el-flashing 1s infinite alternate;
+    animation-delay: 0.75s;
+  }
+  .el-flashing-right {
+    animation: el-flashing 1s infinite alternate;
+    animation-delay: 1.25s;
+  }
+  @keyframes el-flashing {
+    0% {
+      background-color: #258ca8;
+      opacity: 0.5;
+    }
+    50% {
+      background-color: #258ca8;
+      opacity: 1;
+    }
+    100% {
+      background-color: #258ca8;
+      opacity: 0.75;
+    }
+  }
+</style>

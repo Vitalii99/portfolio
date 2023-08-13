@@ -1,0 +1,45 @@
+---
+export const prerender = true;
+
+import Layout from "../layouts/Layout.astro";
+import HeaderPage404 from "../components/header-page-404.astro";
+import FooterPage404 from "../components/footer-page-404.astro";
+import { Image } from "astro:assets";
+import transparentLayout from "../assets/page-404/transparent-layout.png";
+import notFoundGif from "../assets/page-404/not-found.gif";
+
+const transparentLayoutAlt = "";
+const notFoundGifAlt = "404";
+---
+
+<Layout title="404 Not Found">
+  <HeaderPage404 />
+  <main class="w-full xl:w-container mx-auto mt-10 px-4 xl:px-0">
+    <h1 class="mb-5 text-3xl font-medium text-black-dark dark:text-grey-light">Oops!</h1>
+    <p class="mb-10 text-2xl font-light">
+      We can't seem to find the page you're looking for. Go to&nbsp;
+      <a href="/" class="font-normal text-blue-link dark:text-pantone">Home</a>.
+    </p>
+    <div class="mb-10 flex justify-center sm:justify-start">
+      <figure
+        class="relative flex justify-center items-center bg-grey-light rounded-full"
+      >
+        <Image
+          src={transparentLayout}
+          width={transparentLayout.width}
+          height={transparentLayout.height}
+          alt={transparentLayoutAlt}
+          class="object-contain"
+        />
+        <Image
+          src={notFoundGif}
+          width={notFoundGif.width}
+          height={notFoundGif.height}
+          alt={notFoundGifAlt}
+          class="absolute object-contain"
+        />
+      </figure>
+    </div>
+    <FooterPage404 />
+  </main>
+</Layout>

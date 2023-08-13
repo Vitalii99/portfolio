@@ -1,0 +1,49 @@
+---
+export const prerender = true;
+
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import ResumeButton from "../components/resume-button.astro";
+import ResumeLoading from "../components/resume-loading.astro";
+import ContactUs from "../components/contact-us.astro";
+import { Image } from "astro:assets";
+import transparentLayout from "../assets/page-404/transparent-layout.png";
+
+const transparentLayoutAlt = "";
+---
+
+<Layout title="Vitalii Pavlivskyi Portfolio">
+  <Header />
+  <main class="w-full xl:w-container mx-auto mt-24 px-4 xl:px-0">
+    <section class="mb-20 flex flex-col items-center">
+      <h2 class="mb-10 text-5xl font-medium text-pantone text-center">
+        Vitalii Pavlivskyi
+      </h2>
+      <h3 class="mb-10 text-2xl text-center">Front End Developer</h3>
+      <div class="w-full mb-10 sm:mb-0 flex justify-center">
+        <ResumeButton />
+        <ResumeLoading />
+      </div>
+      <p class="mb-10 text-lg text-center">
+        Freelancer providing services for programming.<br />
+        Contact me down below and let's get started.
+      </p>
+      <ContactUs />
+    </section>
+    <div class="w-full mb-20 flex justify-center">
+      <figure
+        class="relative flex justify-center items-center bg-gradient-to-b from-pantone rounded-full"
+      >
+        <Image
+          src={transparentLayout}
+          width={transparentLayout.width}
+          height={transparentLayout.height}
+          alt={transparentLayoutAlt}
+          class="object-contain"
+        />
+      </figure>
+    </div>
+    <Footer />
+  </main>
+</Layout>

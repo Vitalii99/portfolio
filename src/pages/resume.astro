@@ -1,0 +1,19 @@
+---
+export const prerender = true;
+
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+---
+
+<Layout title="Vitalii Pavlivskyi Resume">
+  <Header />
+  <main class="w-full xl:w-container mx-auto mt-24 px-4 xl:px-0">
+    <h1 class="text-3xl font-medium">Vitalii Pavlivskyi</h1>
+    <p class="text-pink-500">
+      To get started, open the directory <code>src/pages</code> in your project.<br/>
+      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+    </p>
+    <Footer />
+  </main>
+</Layout>
