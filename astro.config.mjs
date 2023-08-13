@@ -15,7 +15,4 @@ export default defineConfig({
   image: {
     service: sharpImageService()
   },
-  adapter: node({
-    mode: "standalone"
-  })
 });
