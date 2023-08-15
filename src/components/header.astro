@@ -62,6 +62,7 @@ import HamburgerMenuMobile from "../components/hamburger-menu-mobile.astro";
   // CHANGE HEADER
   const resumeBtn = document.querySelector("#resume-btn");
   const homeBtn = document.querySelector("#home-btn");
+  const hamburgerButtonMobile = document.querySelector("#hamburger-button-mobile");
   const currentUrl = location.pathname.split("/").splice(1, 1).toString();
 
   switch (currentUrl) {
@@ -71,6 +72,8 @@ import HamburgerMenuMobile from "../components/hamburger-menu-mobile.astro";
         resumeBtn.classList.add("sm:hidden");
         homeBtn.classList.remove("sm:hidden");
         homeBtn.classList.add("sm:flex");
+        hamburgerButtonMobile.classList.remove("flex");
+        hamburgerButtonMobile.classList.add("hidden");
       }
       break;
     default: {
