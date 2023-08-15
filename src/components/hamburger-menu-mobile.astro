@@ -1,0 +1,40 @@
+---
+---
+
+<section
+  id="list-menu-mobile"
+  class="top-14 absolute hidden w-full origin-top animate-open-menu flex-col justify-center bg-theme-light dark:bg-theme-dark text-5xl text-pantone"
+>
+  <nav
+    class="flex min-h-screen flex-col items-center py-10"
+    aria-label="mobile"
+  >
+    <a href="#hero" class="w-full py-8 text-center hover:scale-75 delay-150 transition-all">About</a>
+    <hr class="w-1/2 mx-auto" />
+    <a href="#experience" class="w-full py-8 text-center hover:scale-75 delay-150 transition-all">
+      Experience
+    </a>
+    <hr class="w-1/2 mx-auto" />
+    <a href="#projects" class="w-full py-8 text-center hover:scale-75 delay-150 transition-all">
+      Projects
+    </a>
+  </nav>
+</section>
+
+<script>
+  const initApp = () => {
+    const hamburgerMenuMobile = document.querySelector(
+      "#hamburger-button-mobile"
+    );
+    const menuMobile = document.querySelector("#list-menu-mobile");
+    const toggleMenu = () => {
+      menuMobile.classList.toggle("hidden");
+      menuMobile.classList.toggle("flex");
+      hamburgerMenuMobile.classList.toggle("toggle-btn");
+    };
+    hamburgerMenuMobile.addEventListener("click", toggleMenu);
+    menuMobile.addEventListener("click", toggleMenu);
+  };
+
+  document.addEventListener("DOMContentLoaded", initApp);
+</script>

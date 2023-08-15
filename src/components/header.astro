@@ -1,15 +1,20 @@
 ---
 import ThemeIcon from "./theme.astro";
+import HamburgerButtonMobile from "./hamburger-button-mobile.astro";
+import HamburgerMenuMobile from "../components/hamburger-menu-mobile.astro";
 ---
 
-<header id="header" class="w-full fixed top-0 z-10 transition-all shadow-md">
+<header id="header" class="w-full fixed top-0 z-30 transition-all shadow-md">
   <section
     class="mx-auto w-full xl:w-container flex justify-between py-3 px-4 xl:px-0"
   >
     <div class="h-8 flex items-center">
-      <h1 class="font-bold text-black-dark dark:text-pumpkin hover:pb-0.5"><a href="/">WEB.DEVELOPER</a></h1>
+      <h1 class="font-bold text-black-dark dark:text-pumpkin hover:pb-0.5">
+        <a href="/">WEB.DEVELOPER</a>
+      </h1>
     </div>
     <div class="w-37 h-8 flex items-center justify-end sm:justify-between">
+      <HamburgerButtonMobile />
       <div id="resume-btn" class="hidden sm:flex items-center px-4 sm:px-0">
         <a href="resume">
           <span
@@ -29,6 +34,7 @@ import ThemeIcon from "./theme.astro";
       <ThemeIcon />
     </div>
   </section>
+  <HamburgerMenuMobile />
 </header>
 
 <script>
@@ -57,6 +63,7 @@ import ThemeIcon from "./theme.astro";
   const resumeBtn = document.querySelector("#resume-btn");
   const homeBtn = document.querySelector("#home-btn");
   const currentUrl = location.pathname.split("/").splice(1, 1).toString();
+
   switch (currentUrl) {
     case "resume":
       {

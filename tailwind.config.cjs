@@ -6,6 +6,16 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			keyframes: {
+				'open-menu': {
+				  '0%': { transform: 'skaleY(0)' },
+				  '80%': { transform: 'skaleY(1.2)' },
+				  '100%': { transform: 'skaleY(1)' },
+				},
+			  },
+			animation: {
+				'open-menu': 'open-menu 0.5s ease-in-out forwards',
+			  },
 			bgGradientDeg: {
 				50: '50deg',
 				55: '55deg',

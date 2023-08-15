@@ -1,0 +1,1 @@
+import"./hoisted.16672ba4.js";const e=document.querySelector("#resume-btn-mobile"),s=document.querySelector("#resume-loading-mobile"),t=()=>{s.classList.remove("hidden"),s.classList.add("flex"),e.classList.remove("flex"),e.classList.add("hidden"),setTimeout(()=>{location.replace("resume")},3e3)};e&&e.addEventListener("click",t);
