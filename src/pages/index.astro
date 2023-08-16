@@ -7,9 +7,11 @@ import ResumeLoading from "../components/resume-loading.astro";
 import ContactUs from "../components/contact-us.astro";
 import { Image } from "astro:assets";
 import transparentLayout from "../assets/page-404/transparent-layout.png";
+import mySelfTransparent from "../assets/page-home/my-self-transparent.png";
 import Experience from "../components/experience.astro";
 
 const transparentLayoutAlt = "";
+const mySelfTransparentAlt = "My Photo";
 ---
 
 <Layout title="Vitalii Pavlivskyi Portfolio">
@@ -33,7 +35,7 @@ const transparentLayoutAlt = "";
       </div>
       <div class="w-full flex justify-center">
         <figure
-          class="relative flex justify-center items-center bg-gradient-to-b from-pantone rounded-full"
+          class="relative flex justify-center items-center bg-gradient-to-b from-pantone from-20% to-black-dark to-90% rounded-full shadow-md overflow-hidden"
         >
           <Image
             src={transparentLayout}
@@ -41,6 +43,13 @@ const transparentLayoutAlt = "";
             height={transparentLayout.height}
             alt={transparentLayoutAlt}
             class="object-contain"
+          />
+          <Image
+            src={mySelfTransparent}
+            width={280}
+            alt={mySelfTransparentAlt}
+            quality="max"
+            class="absolute object-cover"
           />
         </figure>
       </div>
