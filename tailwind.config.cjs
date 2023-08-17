@@ -41,6 +41,7 @@ module.exports = {
 				sans: ['Montserrat', 'sans-serif'],
 			},
 			height: {
+				'0.5':'0.125rem',
 			},
 			maxWidth:{
 			},
