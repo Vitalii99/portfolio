@@ -9,6 +9,7 @@ import { Image } from "astro:assets";
 import transparentLayout from "../assets/page-404/transparent-layout.png";
 import mySelfTransparent from "../assets/page-home/my-self-transparent.png";
 import Experience from "../components/experience.astro";
+import Projects from "../components/projects.astro";
 
 const transparentLayoutAlt = "";
 const mySelfTransparentAlt = "My Photo";
@@ -17,7 +18,10 @@ const mySelfTransparentAlt = "My Photo";
 <Layout title="Vitalii Pavlivskyi Portfolio">
   <Header />
   <main class="w-full xl:w-container mx-auto mt-14 px-4 xl:px-0">
-    <section id="hero" class="w-full mb-24 flex flex-col items-center scroll-mt-24">
+    <section
+      id="hero"
+      class="w-full mb-16 sm:mb-24 flex flex-col items-center scroll-mt-24"
+    >
       <h2 class="mt-14 mb-6 text-5xl font-medium text-pantone text-center">
         Vitalii Pavlivskyi
       </h2>
@@ -35,7 +39,7 @@ const mySelfTransparentAlt = "My Photo";
       </div>
       <div class="w-full flex justify-center">
         <figure
-          class="relative flex justify-center items-center bg-gradient-to-b from-pantone rounded-full shadow-md overflow-hidden"
+          class="relative flex justify-center items-center bg-gradient-to-b from-pantone dark:to-grey-light rounded-full shadow-md overflow-hidden"
         >
           <Image
             src={transparentLayout}
@@ -55,27 +59,28 @@ const mySelfTransparentAlt = "My Photo";
         </figure>
       </div>
     </section>
-    <hr class="w-1/2 mb-24 mx-auto" />
-    <section id="experience" class="w-full mb-24 flex flex-col scroll-mt-16">
-      <h3 class="mb-16 text-2xl text-start">Experience</h3>
+    <hr class="w-1/2 mb-16 sm:mb-24 mx-auto" />
+    <section id="experience" class="w-full mb-16 sm:mb-24 flex flex-col scroll-mt-16">
+      <h3 class="mb-6 text-2xl text-start">Experience</h3>
+      <p class="mb-8 text-lg text-start">
+        These are the technologies l've worked with.
+      </p>
       <div class="w-full grid grid-cols-2 sm:grid-cols-5 gap-8">
         <Experience />
       </div>
     </section>
-    <hr class="w-1/2 mb-24 mx-auto" />
-    <section id="projects" class="w-full mb-24 flex flex-col">
-      <h3 class="mb-8 text-2xl text-start">Projects</h3>
-      <p class="mb-8 text-lg text-start">
-        Check out some of my recent work.
-      </p>
-      <div class="w-full grid grid-cols-2 sm:grid-cols-5 gap-8">
+    <hr class="w-1/2 mb-16 sm:mb-24 mx-auto" />
+    <section id="projects" class="w-full mb-16 sm:mb-24 flex flex-col scroll-mt-16">
+      <h3 class="mb-6 text-2xl text-start">Projects</h3>
+      <p class="mb-8 text-lg text-start">Check out some of my recent work.</p>
+      <div class="w-full grid sm:grid-cols-2 gap-48">
+        <Projects />
       </div>
     </section>
-    <hr class="w-1/2 mb-24 mx-auto" />
-    <section id="contact" class="w-full mb-24 flex flex-col">
+    <hr class="w-1/2 mb-16 sm:mb-24 mx-auto" />
+    <section id="contact" class="w-full mb-16 sm:mb-24 flex flex-col">
       <h3 class="mb-16 text-2xl text-start">Contact</h3>
-      <div class="w-full grid grid-cols-2 sm:grid-cols-5 gap-8">
-      </div>
+      <div class="w-full grid grid-cols-2 sm:grid-cols-5 gap-8"></div>
     </section>
     <Footer />
   </main>
