@@ -55,6 +55,37 @@ module.exports = {
 		},
 	},
 	plugins: [
+		plugin(function ({ addBase, addComponents, addUtilities, theme }) {
+			addComponents({
+				// Firefox Browser for item list button choose sign 
+				'.scrollbar': {
+					scrollbarWidth: "thin",
+					scrollbarColor: "#d4d4d4 #e9e9e9",
+				},
+				// Chrome, EDGE, Opera, Others for item list button choose sign
+				'.scrollbar::-webkit-scrollbar': {
+					width: "4px",
+				},
+				'.scrollbar::-webkit-scrollbar-track': {
+					backgroundColor: "#e9e9e9",
+					borderRadius: "100vh",
+					// marginTop: "4px",
+				},
+				'.scrollbar::-webkit-scrollbar-thumb': {
+					background: "#d4d4d4",
+					borderRadius: "100vh",
+				},
+				// Chrome, EDGE, Safari, Browser for filter date news page
+				'.scroll-hidden::-webkit-scrollbar': {
+					display: "none",
+				},
+				// Firefox Browser for filter date news page
+				".hide-scrollbar": {
+					scrollbarWidth: "none",
+
+				},
+			})
+		}),
 		plugin(function ({ matchUtilities, theme }) {
 			matchUtilities({
 				'bg-gradient': (angle) => ({
