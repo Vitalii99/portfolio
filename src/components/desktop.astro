@@ -1,10 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import wrapperDesktop from "../assets/page-home/wrapper-desktop.png";
 import screenOneDesktop from "../assets/page-home/screen-one-desktop.png";
 import screenTwoDesktop from "../assets/page-home/screen-two-desktop.png";
 
-const wrapperDesktopAlt = "";
 const screenDesktopAlt = "Screen";
 ---
 
@@ -12,13 +10,6 @@ const screenDesktopAlt = "Screen";
     <figure
       class="w-full max-h-[497px] flex flex-col overflow-hidden scrollbar overflow-y-scroll overscroll-auto hover:overscroll-y-contain scroll-smooth shadow-md"
     >
-      <!-- <Image
-        src={wrapperDesktop}
-        width={wrapperDesktop.width}
-        height={wrapperDesktop.height}
-        alt={wrapperDesktopAlt}
-        class="object-contain"
-      /> -->
       <Image
       src={screenOneDesktop}
       width={screenOneDesktop.width}

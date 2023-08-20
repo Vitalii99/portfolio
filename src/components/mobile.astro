@@ -1,22 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import wrapperMobile from "../assets/page-home/wrapper-mobile.png";
 import screenOneMobile from "../assets/page-home/screen-one-mobile.png";
 import screenTwoMobile from "../assets/page-home/screen-two-mobile.png";
 
-const wrapperMobileAlt = "";
 const screenMobileAlt = "Screen";
 ---
 
 <div class="flex flex-col items-center lg:items-end">
   <figure class="max-w-[280px] max-h-[497px] flex flex-col overflow-hidden scrollbar overflow-y-scroll overscroll-auto hover:overscroll-y-contain scroll-smooth shadow-md">
-    <!-- <Image
-      src={wrapperMobile}
-      width={wrapperMobile.width}
-      height={wrapperMobile.height}
-      alt={wrapperMobileAlt}
-      class="object-contain"
-    /> -->
     <Image
       src={screenOneMobile}
       width={screenOneMobile.width}
