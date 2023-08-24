@@ -2,12 +2,19 @@
 import { Image } from "astro:assets";
 import screenOneMobile from "../assets/page-home/screen-one-mobile.png";
 import screenTwoMobile from "../assets/page-home/screen-two-mobile.png";
+import screenThreeMobile from "../assets/page-home/screen-three-mobile.png";
+import screenFourMobile from "../assets/page-home/screen-four-mobile.png";
+import screenFiveMobile from "../assets/page-home/screen-five-mobile.png";
+import screenSixMobile from "../assets/page-home/screen-six-mobile.png";
+import screenSevenMobile from "../assets/page-home/screen-seven-mobile.png";
 
-const screenMobileAlt = "Screen";
+const screenMobileAlt = "Screen Mobile";
 ---
 
 <div class="flex flex-col items-center lg:items-end">
-  <figure class="max-w-[280px] max-h-[497px] flex flex-col overflow-hidden scrollbar overflow-y-scroll overscroll-auto hover:overscroll-y-contain scroll-smooth shadow-md">
+  <figure
+    class="max-w-70 max-h-124 flex flex-col overflow-hidden scrollbar overflow-y-scroll overscroll-auto hover:overscroll-y-contain scroll-smooth shadow-md"
+  >
     <Image
       src={screenOneMobile}
       width={screenOneMobile.width}
@@ -19,6 +26,41 @@ const screenMobileAlt = "Screen";
       src={screenTwoMobile}
       width={screenTwoMobile.width}
       height={screenTwoMobile.height}
+      alt={screenMobileAlt}
+      class="object-contain"
+    />
+    <Image
+      src={screenThreeMobile}
+      width={screenThreeMobile.width}
+      height={screenThreeMobile.height}
+      alt={screenMobileAlt}
+      class="object-contain"
+    />
+    <Image
+      src={screenFourMobile}
+      width={screenFourMobile.width}
+      height={screenFourMobile.height}
+      alt={screenMobileAlt}
+      class="object-contain"
+    />
+    <Image
+      src={screenFiveMobile}
+      width={screenFiveMobile.width}
+      height={screenFiveMobile.height}
+      alt={screenMobileAlt}
+      class="object-contain"
+    />
+    <Image
+      src={screenSixMobile}
+      width={screenSixMobile.width}
+      height={screenSixMobile.height}
+      alt={screenMobileAlt}
+      class="object-contain"
+    />
+    <Image
+      src={screenSevenMobile}
+      width={screenSevenMobile.width}
+      height={screenSevenMobile.height}
       alt={screenMobileAlt}
       class="object-contain"
     />

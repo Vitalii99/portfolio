@@ -2,13 +2,14 @@
 import { Image } from "astro:assets";
 import screenOneDesktop from "../assets/page-home/screen-one-desktop.png";
 import screenTwoDesktop from "../assets/page-home/screen-two-desktop.png";
+import screenThreeDesktop from "../assets/page-home/screen-three-desktop.png";
 
-const screenDesktopAlt = "Screen";
+const screenDesktopAlt = "Screen Desktop";
 ---
 
 <div class="w-full flex flex-col items-center">
     <figure
-      class="w-full max-h-[497px] flex flex-col overflow-hidden scrollbar overflow-y-scroll overscroll-auto hover:overscroll-y-contain scroll-smooth shadow-md"
+      class="w-full max-h-124 flex flex-col overflow-hidden scrollbar overflow-y-scroll overscroll-auto hover:overscroll-y-contain scroll-smooth shadow-md"
     >
       <Image
       src={screenOneDesktop}
@@ -21,6 +22,13 @@ const screenDesktopAlt = "Screen";
       src={screenTwoDesktop}
       width={screenTwoDesktop.width}
       height={screenTwoDesktop.height}
+      alt={screenDesktopAlt}
+      class="object-contain"
+    />
+      <Image
+      src={screenThreeDesktop}
+      width={screenThreeDesktop.width}
+      height={screenThreeDesktop.height}
       alt={screenDesktopAlt}
       class="object-contain"
     />

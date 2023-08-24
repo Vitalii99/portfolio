@@ -43,7 +43,11 @@ module.exports = {
 			height: {
 				'0.5':'0.125rem',
 			},
+			maxHeight:{
+				'124':'31rem',
+			},
 			maxWidth:{
+				'70':'17.5rem',
 			},
 			screens: {
 				'xl': '1188px',
