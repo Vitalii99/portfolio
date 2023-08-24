@@ -6,13 +6,13 @@ import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import ResumeButton from "../components/resume-button.astro";
 import ResumeLoading from "../components/resume-loading.astro";
-import ContactUs from "../components/contact-us.astro";
+import SocialIcons from "../components/social-icons.astro";
 import { Image } from "astro:assets";
 import transparentLayout from "../assets/page-404/transparent-layout.png";
 import mySelfTransparent from "../assets/page-home/my-self-transparent.png";
 import Skills from "../components/skills.astro";
-import Desktop from "../components/desktop.astro";
-import Mobile from "../components/mobile.astro";
+import PrHoroscopeDesk from "../components/pr-horoscope-desk.astro";
+import PrHoroscopeMob from "../components/pr-horoscope-mob.astro";
 
 const transparentLayoutAlt = "";
 const mySelfTransparentAlt = "My Photo";
@@ -38,7 +38,7 @@ const mySelfTransparentAlt = "My Photo";
         Contact me down below and let's get started.
       </p>
       <div class="mb-16 w-full flex flex-col items-center">
-        <ContactUs />
+        <SocialIcons />
       </div>
       <div class="w-full flex justify-center">
         <figure
@@ -63,7 +63,10 @@ const mySelfTransparentAlt = "My Photo";
       </div>
     </section>
     <hr class="w-1/2 mb-20 sm:mb-24 mx-auto" />
-    <section id="skills" class="w-full mb-16 sm:mb-24 flex flex-col scroll-mt-16">
+    <section
+      id="skills"
+      class="w-full mb-16 sm:mb-24 flex flex-col scroll-mt-16"
+    >
       <h3 class="mb-6 text-2xl text-center sm:text-start">Skills</h3>
       <p class="mb-8 text-lg text-center sm:text-start">
         These are the technologies l've worked with.
@@ -73,21 +76,39 @@ const mySelfTransparentAlt = "My Photo";
       </div>
     </section>
     <hr class="w-1/2 mb-20 sm:mb-24 mx-auto" />
-    <section id="projects" class="w-full mb-16 sm:mb-24 flex flex-col scroll-mt-16">
+    <section
+      id="projects"
+      class="w-full mb-16 sm:mb-24 flex flex-col scroll-mt-16"
+    >
       <h3 class="mb-6 text-2xl text-center sm:text-start">Projects</h3>
-      <p class="mb-8 text-lg text-center sm:text-start">Check out some of my recent work.</p>
-      <div class="w-full mb-8 grid grid-cols-6 items-start">
-        <div class="w-full mb-16 lg:mb-0 hidden sm:grid sm:col-span-6 lg:col-span-4">
+      <p class="mb-8 text-lg text-center sm:text-start">
+        Check out some of my recent work.
+      </p>
+      <div class="w-full grid grid-cols-6 items-start">
+        <div class="w-full mb-16 lg:mb-8 hidden sm:grid sm:col-span-6 lg:col-span-4">
           <div class="w-full mb-16 bg-pantone rounded-l-full h-0.5"></div>
-          <Desktop />
+          <PrHoroscopeDesk />
         </div>
-        <div class="w-full grid col-span-6 lg:col-span-2 items-start">
-          <div class="w-full mb-16 bg-pumpkin rounded-full sm:rounded-r-full h-0.5"></div>
-          <Mobile />
+        <div class="w-full mb-8 grid col-span-6 lg:col-span-2 items-start">
+          <div class="w-full mb-16 bg-pumpkin rounded-full sm:rounded-r-full h-0.5">
+          </div>
+          <PrHoroscopeMob />
+        </div>
+        <div class="w-full grid col-span-6">
+          <p class="mb-8 text-sm underline text-center sm:text-start">
+            <a href="https://pythia-web.fly.dev/" target="_blank">
+              Horoscope demo
+            </a>
+          </p>
+          <p class="underline text-sm text-center sm:text-start">
+            <a 
+            href="https://github.com/Vitalii99/GoroscopeLAYOUT/tree/main/goroscope-layout-static" 
+            target="_blank">
+              Horoscope code
+            </a>
+          </p>
         </div>
       </div>
-      <p class="mb-8 underline text-center sm:text-start"><a href="https://pythia-web.fly.dev/" target="_blank">Horoscope demo</a></p>
-      <p class="underline text-center sm:text-start"><a href="https://github.com/Vitalii99/GoroscopeLAYOUT/tree/main/goroscope-layout-static" target="_blank">Horoscope code</a></p>
     </section>
     <hr class="w-1/2 mb-20 sm:mb-24 mx-auto" />
     <section id="contact" class="w-full mb-16 sm:mb-24 flex flex-col">
