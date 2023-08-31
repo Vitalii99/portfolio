@@ -71,7 +71,7 @@ module.exports = {
 					width: "4px",
 				},
 				'.scrollbar::-webkit-scrollbar-track': {
-					backgroundColor: "#e9e9e9",
+					backgroundColor: "#fff",
 					borderRadius: "100vh",
 					// marginTop: "4px",
 				},
