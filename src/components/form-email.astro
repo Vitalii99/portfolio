@@ -1,24 +1,11 @@
 ---
-const errors = { name: "", email: "", password: "" };
-if (Astro.request.method === "POST") {
-    try {
-        const data = await Astro.request.formData();
-        console.log(data)
-        const name = data.get("name");
-        console.log(name)
-        const email = data.get("email");
-        const message = data.get("message");
-    } catch (error) {
-        if (error instanceof Error) {
-            console.error(error.message);
-        }
-    }
-}
 ---
 
 <form
+    id="form"
     action=""
     method="POST"
+    data-netlify="true"
     class="mx-auto flex max-w-4xl flex-col items-center sm:items-start"
 >
     <label for="name"></label>
@@ -26,22 +13,21 @@ if (Astro.request.method === "POST") {
         type="text"
         id="name"
         name="name"
-        pattern="^[a-zA-Z-яА-ЯЇїІі']+(?:(?:\\s+|-)+[a-zA-Z-яА-ЯЇїІі']+)*"
+        pattern="^[a-zA-Z]+(?:(?:\\s+|-)+[a-zA-Z]+)*"
         required
         minlength="2"
         maxlength="60"
         placeholder="Name"
-        class="w-full mb-4 p-3 bg-grey-light text-2xl text-black-dark invalid:focus:placeholder-pumpkin shadow-md focus:outline-none"
+        class="w-full mb-6 p-3 text-xl text-black-dark invalid:focus:placeholder-pumpkin shadow-lg focus:outline-none border dark:border-none"
     />
     <label for="email"></label>
     <input
         type="email"
         id="email"
         name="email"
-        pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
         required
         placeholder="Email"
-        class="w-full mb-4 p-3 bg-grey-light text-2xl text-black-dark invalid:focus:placeholder-pumpkin shadow-md focus:outline-none"
+        class="w-full mb-6 p-3 text-xl text-black-dark invalid:focus:placeholder-pumpkin shadow-lg focus:outline-none border dark:border-none"
     />
     <label for="message"></label>
     <textarea
@@ -51,13 +37,11 @@ if (Astro.request.method === "POST") {
         rows="5"
         placeholder="Your Message"
         required
-        class="w-full mb-4 bg-grey-light scrollbar scroll-smooth overscroll-auto p-3 text-2xl text-black-dark invalid:focus:placeholder-pumpkin shadow-md focus:outline-none"
+        class="w-full mb-6 scrollbar scroll-smooth overscroll-auto py-3 ps-3 text-xl text-black-dark invalid:focus:placeholder-pumpkin shadow-lg focus:outline-none border dark:border-none"
     ></textarea>
     <button
-        class="w-48 h-14 flex justify-center items-center bg-gradient-45 from-pantone from-10% via-blue-light via-50% to-blue-dark to-90% hover:bg-gradient-45 hover:from-pumpkin hover:from-10% hover:via-orange-light hover:via-50% hover:to-orange-dark hover:to-90% rounded-full border-none text-base font-medium uppercase text-pantone hover:text-black-light hover:font-normal"
+        class="w-48 h-14 flex justify-center items-center bg-gradient-45 from-pantone from-10% via-blue-light via-50% to-blue-dark to-90% hover:bg-gradient-45 hover:from-pumpkin hover:from-10% hover:via-orange-light hover:via-50% hover:to-orange-dark hover:to-90% rounded-full border-none text-base font-medium text-pantone hover:text-black-light hover:font-normal"
     >
-        Submit
+        Let's Collaborate
     </button>
 </form>
-
-<!-- var email = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/; -->
