@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-theme-light text-black-light dark:text-grey-light astro-SCKKX6R4">
+<html lang="en" class="bg-theme-light text-black-light dark:text-grey-light sm:scroll-smooth astro-SCKKX6R4">
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="Astro description">
@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <title>404 Not Found</title>
-  <link rel="stylesheet" href="/_astro/404.aa125e24.css" />
+  <link rel="stylesheet" href="/_astro/404.fc7d86ba.css" />
 <link rel="stylesheet" href="/_astro/404.764abeac.css" /></head>
   <body class="min-h-screen m-0 p-0 astro-SCKKX6R4">
     
@@ -21,7 +21,7 @@
       <h1 class="font-bold text-black-dark dark:text-pumpkin hover:pb-0.5"><a href="/">WEB.DEVELOPER</a></h1>
     </div>
     <div class="hidden">
-      <button type="button" id="themeToggle" class="hidden sm:flex astro-LX4EAE6Q">
+      <button type="button" id="themeToggle" class="hidden sm:flex astro-LX4EAE6Q" aria-label="Theme">
   <svg width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="astro-LX4EAE6Q">
     <path class="sun astro-LX4EAE6Q" fill-rule="evenodd" d="M12 17.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zm0 1.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm12-7a.8.8 0 0 1-.8.8h-2.4a.8.8 0 0 1 0-1.6h2.4a.8.8 0 0 1 .8.8zM4 12a.8.8 0 0 1-.8.8H.8a.8.8 0 0 1 0-1.6h2.5a.8.8 0 0 1 .8.8zm16.5-8.5a.8.8 0 0 1 0 1l-1.8 1.8a.8.8 0 0 1-1-1l1.7-1.8a.8.8 0 0 1 1 0zM6.3 17.7a.8.8 0 0 1 0 1l-1.7 1.8a.8.8 0 1 1-1-1l1.7-1.8a.8.8 0 0 1 1 0zM12 0a.8.8 0 0 1 .8.8v2.5a.8.8 0 0 1-1.6 0V.8A.8.8 0 0 1 12 0zm0 20a.8.8 0 0 1 .8.8v2.4a.8.8 0 0 1-1.6 0v-2.4a.8.8 0 0 1 .8-.8zM3.5 3.5a.8.8 0 0 1 1 0l1.8 1.8a.8.8 0 1 1-1 1L3.5 4.6a.8.8 0 0 1 0-1zm14.2 14.2a.8.8 0 0 1 1 0l1.8 1.7a.8.8 0 0 1-1 1l-1.8-1.7a.8.8 0 0 1 0-1z"></path>
     <path class="star astro-LX4EAE6Q" fill-rule="evenodd" d="M6 12.0002L7.875 7.87515L12 6.00015L7.875 4.12515L6 0.000152588L4.125 4.12515L0 6.00015L4.125 7.87515L6 12.0002Z" fill="none"></path>
@@ -70,19 +70,19 @@ const handleToggleClick = () => {
     header.classList.remove("bg-theme-dark");
     header.classList.add("bg-theme-light");
   }
-};
+  };
 
-const themeToggle = document.querySelector("#themeToggle");
-themeToggle.addEventListener("click", handleToggleClick);
+  const themeToggle = document.querySelector("#themeToggle");
+  themeToggle.addEventListener("click", handleToggleClick);
 </script>
     </div>
   </section>
 </header>
   <main class="w-full xl:w-container mx-auto px-4 xl:px-0">
     <h2 class="mt-14 mb-6 text-3xl font-medium text-black-dark dark:text-grey-light">Oops!</h2>
-    <p class="mb-8 text-2xl font-light">
+    <p class="mb-8 text-2xl font-normal">
       We can't seem to find the page you're looking for. Go to&nbsp;
-      <a href="/" class="font-normal text-blue-link dark:text-pantone">Home</a>.
+      <a href="/" class="font-medium text-blue-link dark:text-pantone">Home</a>.
     </p>
     <div class="mb-8 flex justify-center sm:justify-start">
       <figure class="relative flex justify-center items-center bg-grey-light rounded-full">

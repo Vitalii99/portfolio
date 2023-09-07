@@ -11,9 +11,9 @@ export default defineConfig({
   adapter: netlify(),
   integrations: [tailwind()],
   experimental: {
-    assets: true
+    assets: true,
   },
   image: {
-    service: sharpImageService()
-  }
+    service: sharpImageService(),
+  },
 });
