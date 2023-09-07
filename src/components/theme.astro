@@ -1,7 +1,12 @@
 ---
 ---
 
-<button type="button" id="themeToggle" class="hidden sm:flex" aria-label="Theme">
+<button
+  type="button"
+  id="themeToggle"
+  class="hidden sm:flex"
+  aria-label="Theme"
+>
   <svg width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path
       class="sun"
@@ -92,8 +97,8 @@ const handleToggleClick = () => {
     header.classList.remove("bg-theme-dark");
     header.classList.add("bg-theme-light");
   }
-};
+  };
 
-const themeToggle = document.querySelector("#themeToggle");
-themeToggle.addEventListener("click", handleToggleClick);
+  const themeToggle = document.querySelector("#themeToggle");
+  themeToggle.addEventListener("click", handleToggleClick);
 </script>
