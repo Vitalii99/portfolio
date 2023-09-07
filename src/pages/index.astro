@@ -41,20 +41,17 @@ const mySelfTransparentAlt = "My Photo";
           class="relative flex justify-center items-center bg-gradient-to-b from-pantone dark:to-grey-light rounded-full shadow-md overflow-hidden"
         >
           <Image
-            loading="eager"
             src={transparentLayout}
             width={transparentLayout.width}
             height={transparentLayout.height}
             alt={transparentLayoutAlt}
           />
           <Image
-            loading="eager"
             src={mySelfTransparent}
             width={mySelfTransparent.width}
             height={mySelfTransparent.height}
             alt={mySelfTransparentAlt}
             quality="max"
-            sizes="(min-width: 380px) 300px, calc(53.33vw + 108px)"
             class="absolute object-contain"
           />
         </figure>
