@@ -30,6 +30,7 @@ module.exports = {
 				'grey-light': '#e9e9e9',
 				'grey-hover': '#e6e4e4',
 				'pumpkin': '#ff7518',
+				'freelancer': '#B7CAD9',
 				'orange-light': '#fed7aa',
 				'orange-dark': '#fdba74',
 				'pantone': '#258ca8',
