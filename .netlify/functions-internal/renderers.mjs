@@ -2063,7 +2063,7 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   }
   const image = await getImage(props);
   return renderTemplate`${maybeRenderHead()}<img${addAttribute(image.src, "src")}${spreadAttributes(image.attributes)}>`;
-}, "D:/coder/ASTRO_PORTFOLIO/my-portfolio/node_modules/astro/components/Image.astro", void 0);
+}, "D:/coder/PORTFOLIO_ASTRO/portfolio/node_modules/astro/components/Image.astro", void 0);
 
 const imageServiceConfig = {};
 					const getImage = async (options) => await getImage$1(options, imageServiceConfig);

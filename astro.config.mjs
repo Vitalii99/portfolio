@@ -5,7 +5,7 @@ import netlify from "@astrojs/netlify/functions";
 // https://astro.build/config
 export default defineConfig({
   server: {
-    port: 3099
+    port: 4321
   },
   output: 'server',
   adapter: netlify(),
