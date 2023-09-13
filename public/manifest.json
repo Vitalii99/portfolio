@@ -3,7 +3,7 @@
     "background_color": "#ffffff",
     "display_override": ["window-control-overlay", "minimal-ui"],
     "display": "standalone",
-    "id": "/https://portfolio-2023-vp.netlify.app/",
+    "id": "/",
     "start_url": "/https://portfolio-2023-vp.netlify.app/",
     "name": "Vitalii Pavlivskyi Portfolio",
     "short_name": "Portfolio",
