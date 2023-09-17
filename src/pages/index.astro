@@ -7,13 +7,11 @@ import Footer from "../components/footer.astro";
 import ResumeButton from "../components/resume-button.astro";
 import ResumeLoading from "../components/resume-loading.astro";
 import { Image } from "astro:assets";
-import transparentLayout from "../assets/page-404/transparent-layout.png";
 import freelancerImg from "../assets/page-home/freelancer.png";
 import Skills from "../components/skills.astro";
 import ProjectHoroscope from "../components/project-horoscope.astro";
 import FormEmail from "../components/form-email.astro";
 
-const transparentLayoutAlt = "";
 const freelancerImgAlt = "Freelancer";
 ---
 
@@ -40,21 +38,15 @@ const freelancerImgAlt = "Freelancer";
       </p>
       <div class="w-full flex justify-center">
         <figure
-          class="relative flex justify-center items-center bg-gradient-to-b from-freelancer from-90% to-grey-light rounded-full shadow-lg overflow-hidden"
+          class="w-75 flex justify-center items-center bg-gradient-to-b from-freelancer from-90% to-grey-light rounded-full shadow-lg overflow-hidden"
         >
-          <Image
-            src={transparentLayout}
-            width={transparentLayout.width}
-            height={transparentLayout.height}
-            alt={transparentLayoutAlt}
-          />
           <Image
             src={freelancerImg}
             width={freelancerImg.width}
             height={freelancerImg.height}
             alt={freelancerImgAlt}
             quality="max"
-            class="absolute object-contain left-2 bottom-4"
+            class="object-cover"
           />
         </figure>
       </div>
