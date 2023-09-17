@@ -5,10 +5,8 @@ import Layout from "../layouts/Layout.astro";
 import HeaderPage404 from "../components/header-page-404.astro";
 import FooterPage404 from "../components/footer-page-404.astro";
 import { Image } from "astro:assets";
-import transparentLayout from "../assets/page-404/transparent-layout.png";
 import notFoundGif from "../assets/page-404/not-found.gif";
 
-const transparentLayoutAlt = "";
 const notFoundGifAlt = "404";
 ---
 
@@ -22,21 +20,15 @@ const notFoundGifAlt = "404";
     </p>
     <div class="mb-8 flex justify-center sm:justify-start">
       <figure
-        class="relative flex justify-center items-center bg-grey-light rounded-full"
+        class="w-75 flex justify-center items-center bg-grey-light rounded-full overflow-hidden"
       >
-        <Image
-          src={transparentLayout}
-          width={transparentLayout.width}
-          height={transparentLayout.height}
-          alt={transparentLayoutAlt}
-          class="object-contain"
-        />
         <Image
           src={notFoundGif}
           width={notFoundGif.width}
           height={notFoundGif.height}
           alt={notFoundGifAlt}
-          class="absolute object-contain"
+          quality="mid"
+          class="object-cover p-8"
         />
       </figure>
     </div>
