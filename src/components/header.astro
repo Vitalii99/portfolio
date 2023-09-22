@@ -9,7 +9,7 @@ import HamburgerMenuMobile from "../components/hamburger-menu-mobile.astro";
     class="mx-auto w-full xl:w-container flex justify-between py-3 px-4 xl:px-0"
   >
     <div class="h-8 flex items-center">
-      <h1 class="font-bold text-black-dark dark:text-pumpkin hover:pb-0.5">
+      <h1 class="font-bold text-black-dark dark:text-pumpkin">
         <a href="/">WEB.DEVELOPER</a>
       </h1>
     </div>
@@ -30,9 +30,9 @@ import HamburgerMenuMobile from "../components/hamburger-menu-mobile.astro";
         </a>
       </div>
       <div id="home-btn" class="hidden sm:hidden items-center">
-        <a href="/" class="hover:pb-0.5 hover:underline hover:underline-offset-2 hover:decoration-pumpkin">
+        <a href="/">
           <span
-            class="text-base font-light sm:px-4 py-1"
+          class="text-base font-light text-black-dark bg-grey-light hover:bg-grey-hover transition-colors delay-150 rounded-3xl px-4 py-1"
             >Home</span
           >
         </a>
@@ -78,9 +78,7 @@ import HamburgerMenuMobile from "../components/hamburger-menu-mobile.astro";
         resumeBtn.classList.remove("sm:flex");
         resumeBtn.classList.add("sm:hidden");
         homeBtn.classList.remove("sm:hidden");
-        homeBtn.classList.remove("hidden");
         homeBtn.classList.add("sm:flex");
-        homeBtn.classList.add("flex");
         hamburgerButtonMobile.classList.remove("flex");
         hamburgerButtonMobile.classList.add("hidden");
         navLinksDesktop.classList.add("sm:hidden")

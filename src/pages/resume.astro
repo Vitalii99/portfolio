@@ -6,38 +6,82 @@ import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import myPhoto from "../assets/page-resume/my-photo.webp";
 import { Image } from "astro:assets";
+import SocialIcons from "../components/social-icons.astro";
+import AlertSuccessfullyCopied from "../components/alert-successfully-copied.astro";
 
+interface Props {
+  link: string;
+}
+
+const link = Astro.url.href;
 const myPhotoAlt = "My Photo";
 ---
 
 <Layout title="Resume">
   <Header />
-  <main class="w-full xl:w-container mx-auto mt-24 px-4 xl:px-0">
-    <section
-      class="w-full mb-16 sm:mb-6 bg-pantone/80 text-center sm:text-start text-black-dark dark:text-grey-light flex flex-col sm:flex-row gap-x-8 items-center scroll-mt-24"
-    >
-      <figure class="w-48 mt-8 sm:mt-0 flex justify-center items-center">
-        <Image
-          src={myPhoto}
-          width={myPhoto.width}
-          height={myPhoto.height}
-          alt={myPhotoAlt}
-          quality="max"
-          class="object-cover"
-        />
-      </figure>
-      <div class="w-full sm:w-3/4 flex flex-col">
-        <h2 class="mt-4 text-3xl font-medium">Vitalii Pavlivskyi</h2>
-        <h3 class="mb-2 text-xl font-normal">Front End Developer</h3>
-        <address>
-          <p class="font-medium">Ukraine</p>
-          <p class="mb-2">
-            <a href="mailto:vitalykdc4704ct@gmail.com">vitalykdc4704ct@gmail.com</a>
+  <main class="w-full xl:w-container mx-auto mt-14 px-4 xl:px-0">
+    <div class="w-full mb-16 sm:mb-24 flex flex-col">
+      <section
+        class="w-full mb-12 mt-12 bg-pantone/80 text-center sm:text-start text-black-dark dark:text-grey-light flex flex-col sm:flex-row items-center sm:justify-between scroll-mt-24"
+      >
+        <figure class="max-w-48 mt-8 sm:mt-0 flex justify-center items-center">
+          <Image
+            src={myPhoto}
+            width={myPhoto.width}
+            height={myPhoto.height}
+            alt={myPhotoAlt}
+            quality="max"
+            class="object-cover"
+          />
+        </figure>
+        <div class="w-full sm:w-3/5 flex flex-col">
+          <h2 class="mt-4 text-3xl font-medium">Vitalii Pavlivskyi</h2>
+          <h3 class="mb-2 text-xl font-normal">Front End Developer</h3>
+          <address>
+            <p class="font-medium">Ukraine</p>
+            <p class="mb-2">
+              <a href="mailto:vitalykdc4704ct@gmail.com"
+                >vitalykdc4704ct@gmail.com</a
+              >
+            </p>
+            <p class="mb-2 sm:mb-0">
+              <a href="tel:+380671742453">+38 (067) 174-2453</a>
+            </p>
+          </address>
+        </div>
+      </section>
+      <div class="w-full justify-between flex flex-col sm:flex-row">
+        <div class="w-full mb-12 sm:mb-0 sm:w-2/5 flex flex-col">
+          <div class="w-full mb-12 flex flex-row gap-x-4">
+            <SocialIcons link={link} />
+          </div>
+          <div class="w-full mb-12 flex flex-col"></div>
+        </div>
+        <div class="w-full sm:w-3/5 flex flex-col">
+          <p class="w-full mb-6 font-medium text-xl">Profile</p>
+          <p class="w-full mb-12 font-normal text-base">
+            Promising Front End Developer beginner which user-focused in
+            collaborating whith design teams UX/UI to plan the technical writing
+            and execution of functional specifications for websites and
+            applications.
           </p>
-          <p class="mb-2 sm:mb-0"><a href="tel: +380671742453">+38 (067) 174-2453</a></p>
-        </address>
+          <p class="w-full mb-6 font-medium text-xl">Employment History</p>
+          <p class="w-full mb-6 font-medium text-base">
+            Front End Developer, Freelancer
+          </p>
+          <p class="w-full mb-12 font-normal text-base">July 2023</p>
+          <p class="w-full mb-6 font-medium text-xl">Education</p>
+          <p class="w-full mb-6 font-medium text-base">Prog Academy, Kyiv</p>
+          <p class="w-full mb-6 font-normal text-base">
+            October 2022 - June 2023
+          </p>
+          <p class="w-full">
+            Front End Developer course. HTML, CSS, JavaScript, React.
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
     <Footer />
   </main>
+  <AlertSuccessfullyCopied />
 </Layout>

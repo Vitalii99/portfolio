@@ -48,6 +48,7 @@ module.exports = {
 				'124':'31rem',
 			},
 			maxWidth:{
+				'48':'12rem',
 				'70':'17.5rem',
 			},
 			screens: {
