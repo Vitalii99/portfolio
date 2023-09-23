@@ -14,21 +14,39 @@ import HamburgerMenuMobile from "../components/hamburger-menu-mobile.astro";
       </h1>
     </div>
     <nav id="nav-links-desktop" class="hidden sm:flex gap-x-2 items-center">
-      <a href="#hero" class="text-base font-light text-black-dark dark:text-grey-light hover:bg-grey-hover dark:hover:text-black-dark rounded-3xl px-2 py-0.5">About</a>
-      <a href="#skills" class="text-base font-light text-black-dark dark:text-grey-light hover:bg-grey-hover dark:hover:text-black-dark rounded-3xl px-2 py-0.5">Skills</a>
-      <a href="#projects" class="text-base font-light text-black-dark dark:text-grey-light hover:bg-grey-hover dark:hover:text-black-dark rounded-3xl px-2 py-0.5">Projects</a>
-      <a href="#contact" class="text-base font-light text-black-dark dark:text-grey-light hover:bg-grey-hover dark:hover:text-black-dark rounded-3xl px-2 py-0.5">Contact</a>
+      <a
+        href="#hero"
+        class="text-base font-light text-black-dark dark:text-grey-light hover:bg-grey-hover dark:hover:text-black-dark rounded-3xl px-2 py-0.5">About</a>
+      <a
+        href="#skills"
+        class="text-base font-light text-black-dark dark:text-grey-light hover:bg-grey-hover dark:hover:text-black-dark rounded-3xl px-2 py-0.5">Skills</a>
+      <a
+        href="#projects"
+        class="text-base font-light text-black-dark dark:text-grey-light hover:bg-grey-hover dark:hover:text-black-dark rounded-3xl px-2 py-0.5">Projects</a>
+      <a
+        href="#contact"
+        class="text-base font-light text-black-dark dark:text-grey-light hover:bg-grey-hover dark:hover:text-black-dark rounded-3xl px-2 py-0.5">Contact</a>
     </nav>
     <div class="w-37 h-8 flex items-center justify-end sm:justify-between">
       <HamburgerButtonMobile />
       <div id="resume-btn" class="hidden sm:flex items-center px-4 sm:px-0">
-        <a href="resume" class="text-base font-light text-black-dark bg-grey-light hover:bg-grey-hover transition-colors delay-150 rounded-3xl px-2 py-0.5">
-          Resume
-        </a>
+        <a
+          href="resume"
+          class="text-base font-light text-black-dark bg-grey-light hover:bg-grey-hover transition-colors delay-150 rounded-3xl px-2 py-0.5"
+        >Resume</a>
       </div>
       <div id="home-btn" class="hidden sm:hidden items-center">
-        <a href="/" class="text-base font-light text-black-dark bg-grey-light hover:bg-grey-hover transition-colors delay-150 rounded-3xl px-2 py-0.5">
-          Go back
+        <a
+          href="/"
+          class="text-base font-light text-black-dark bg-grey-light hover:bg-grey-hover transition-colors delay-150 rounded-3xl px-8 py-0.5"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24px"
+            height="24px">
+            <path
+              d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 10 21 L 10 14 L 14 14 L 14 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z" fill="#464545"></path></svg>
         </a>
       </div>
       <ThemeIcon />
@@ -62,7 +80,9 @@ import HamburgerMenuMobile from "../components/hamburger-menu-mobile.astro";
   // CHANGE HEADER
   const resumeBtn = document.querySelector("#resume-btn");
   const homeBtn = document.querySelector("#home-btn");
-  const hamburgerButtonMobile = document.querySelector("#hamburger-button-mobile");
+  const hamburgerButtonMobile = document.querySelector(
+    "#hamburger-button-mobile"
+  );
   const navLinksDesktop = document.querySelector("#nav-links-desktop");
   const currentUrl = location.pathname.split("/").splice(1, 1).toString();
 
@@ -72,10 +92,12 @@ import HamburgerMenuMobile from "../components/hamburger-menu-mobile.astro";
         resumeBtn.classList.remove("sm:flex");
         resumeBtn.classList.add("sm:hidden");
         homeBtn.classList.remove("sm:hidden");
+        homeBtn.classList.remove("hidden");
         homeBtn.classList.add("sm:flex");
+        homeBtn.classList.add("flex");
         hamburgerButtonMobile.classList.remove("flex");
         hamburgerButtonMobile.classList.add("hidden");
-        navLinksDesktop.classList.add("sm:hidden")
+        navLinksDesktop.classList.add("sm:hidden");
       }
       break;
     default: {
