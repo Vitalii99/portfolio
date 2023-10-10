@@ -5,9 +5,9 @@ import Layout from "../layouts/Layout.astro";
 import HeaderPage404 from "../components/header-page-404.astro";
 import FooterPage404 from "../components/footer-page-404.astro";
 import { Image } from "astro:assets";
-import notFoundGif from "../assets/page-404/not-found.gif";
+import notFound from "../assets/page-404/not-found.png";
 
-const notFoundGifAlt = "404";
+const notFoundAlt = "Not found";
 ---
 
 <Layout title="404 Not Found">
@@ -23,12 +23,12 @@ const notFoundGifAlt = "404";
         class="w-75 flex justify-center items-center bg-grey-light rounded-full overflow-hidden"
       >
         <Image
-          src={notFoundGif}
-          width={notFoundGif.width}
-          height={notFoundGif.height}
-          alt={notFoundGifAlt}
-          quality="mid"
-          class="object-cover p-8"
+          src={notFound}
+          width={notFound.width}
+          height={notFound.height}
+          alt={notFoundAlt}
+          quality="max"
+          class="object-cover"
         />
       </figure>
     </div>
